@@ -1,0 +1,16 @@
+{
+  "name": "sentry-next-monorepo-demo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run -ws --if-present --parallel dev",
+    "dev:web": "npm run dev -w @demo/web",
+    "dev:api": "npm run dev -w @demo/api",
+    "build": "npm run -ws --if-present build",
+    "lint": "npm run -ws --if-present lint",
+    "typecheck": "npm run -ws --if-present typecheck"
+  }
+}

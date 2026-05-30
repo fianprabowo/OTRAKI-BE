@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply text-slate-900 antialiased;
+    background: radial-gradient(1200px 820px at 10% 8%, rgba(79, 125, 243, 0.14), transparent 55%),
+      radial-gradient(950px 680px at 92% 14%, rgba(251, 191, 36, 0.12), transparent 55%),
+      linear-gradient(180deg, #ffffff 0%, #f5f9ff 52%, #ffffff 100%);
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-[16px] border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-200/60 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0;
+  }
+
+  .btn-primary {
+    @apply btn border-transparent bg-brand-600 text-white shadow-[0_14px_40px_-24px_rgba(37,99,235,0.9)] hover:bg-brand-700;
+  }
+
+  .btn-ghost {
+    @apply btn bg-white/90 text-brand-800 ring-1 ring-brand-200/50 hover:bg-brand-50;
+  }
+}
